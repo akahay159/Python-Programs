@@ -1,0 +1,23 @@
+#using class
+class Stack():
+    def __init__(self,):
+        self.items=[]
+    def push(self,item):
+        self.items.append(item)
+    def pop(self):
+        return self.items.pop()
+    def is_empty(self):
+        return self.items==[]
+  s=Stack() #object creation     
+# fucntion to convert and it can be further be implemented
+def converter(number):
+    while number:
+        rem=number%2
+        s.push(rem)
+        number=number//2
+    bin_num=""
+    while  not s.is_empty():
+        bin_num+=str(s.pop())
+    return bin_num
+a=242
+print(converter(a))       
