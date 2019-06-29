@@ -1,0 +1,19 @@
+def permutation2(s1,s2):
+    s1=s1.lower()
+    s2=s2.lower()
+    d=dict()
+    for i in s1:
+        if i in d:
+            d[i]-=1
+        else:
+            d[i]=1
+    for i in s2:
+        if i in d:
+            d[i]-=1
+        else:
+            d[i]=1
+    return all(value==0 for value in d.values())
+print(permutation2("asdfg","asdfh"))
+
+#output
+False
