@@ -1,0 +1,19 @@
+def product_array(a:list,n:int):
+    i,temp=1,1
+    product=[1 for i in range(n)]
+    print(product)
+    for i in range(n):
+        product[i]=temp
+        temp*=a[i]
+    temp=1
+    for i in range(n-1,-1,-1):
+        product[i]*=temp
+        temp*=a[i]
+    return product
+arr=[10,3,5,6,2]
+n=len(arr)
+print(product_array(arr,n))
+
+#output
+[1, 1, 1, 1, 1]
+[180, 600, 360, 300, 900]
