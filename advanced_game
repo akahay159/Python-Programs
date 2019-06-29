@@ -1,0 +1,6 @@
+def game(a):
+    furthest=0
+    i=0
+    lastindex=len(a)-1
+    while i<=furthest and furthest<lastindex:
+        furthest=max(furthest,a[i])
